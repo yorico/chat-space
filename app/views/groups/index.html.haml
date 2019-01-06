@@ -1,27 +1,6 @@
-//左側
-= render 'shared/side_bar'
+.wrapper
+
+  = render 'shared/side_bar'
 
 
-//右側
-.chat-main
-  .chat-main__header
-    .chat-main__header--group
-      %h2.chat-main__header--group-name
-        sampleグループ
-      %p.chat-main__header--group-members
-        Members: shinya
-    %a.btn{href: '/'}
-      .btn-edit
-        Edit
 
-  .chat-main__content
-    .chat-main__list
-      = render partial: "messages/chat-main"
-
-  .chat-main__footer
-    %form.footer__form
-      %input.message{type: "text", placeholder: "type a message"}
-      %label{for: "message-image"}
-        %input.image{type: "file", accept: "image/*", id: "message-image"}
-        %i.fa.fa-picture-o
-      %input.submit{type: "submit", value: "Send"}
