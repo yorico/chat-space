@@ -58,3 +58,6 @@ gem 'haml-rails'
 gem 'erb2haml'
 
 gem 'devise', '~> 4.4.3'
+
+gem 'carrierwave'
+gem 'mini_magick'
