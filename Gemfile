@@ -61,3 +61,4 @@ gem 'devise', '~> 4.4.3'
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'pry-rails'
