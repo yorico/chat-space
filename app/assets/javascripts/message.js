@@ -34,8 +34,8 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(messages){
+      var html = buildSendMessageHTML(messages);
       $('.messages').append(html)
       $('.form__message').val('')
       $('form')[0].reset();

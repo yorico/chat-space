@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
 
   def index
-    # binding.pry
-    # @users = User.where('name LIKE(?) and (id != ?)', "%#{params[:keyword]}%", "#{current_user.id}").limit(10)
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
     respond_to do |format|
       format.html

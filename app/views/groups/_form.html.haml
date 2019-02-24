@@ -14,7 +14,6 @@
 
   .chat-group-form__field.clearfix
 
-
     .chat-group-form__field--left
       %label.chat-group-form__label{:for => "chat_group_チャットメンバーを追加"} チャットメンバーを追加
     .chat-group-form__field--right
@@ -34,14 +33,6 @@
             %p.chat-group-user__name= user.name
             %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove{ 'data-user-id': user.id } 削除
 
-
-      / / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
-      /   <div id='chat-group-users'>
-      /   <div class='chat-group-user clearfix' id='chat-group-user-22'>
-      /   <input name='chat_group[user_ids][]' type='hidden' value='22'>
-      /   <p class='chat-group-user__name'>seo_kyohei</p>
-      /   </div>
-      /   </div>
   .chat-group-form__field.clearfixf
     .chat-group-form__field--left
     .chat-group-form__field--right
