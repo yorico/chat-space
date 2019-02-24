@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(content){
+  function buildSendMessageHTML(content){
     var messageImage = content.image ? content.image : " ";
     var html = `<div class="message">
                   <div class="upper-message">
@@ -35,7 +35,7 @@ $(function(){
       contentType: false
     })
     .done(function(messages){
-      var html = buildSendMessageHTML(messages);
+      var html = buildHTML(messages);
       $('.messages').append(html)
       $('.form__message').val('')
       $('form')[0].reset();
