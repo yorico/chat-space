@@ -1,5 +1,6 @@
 $(function(){
-  function buildHTML(content){
+  function buildSendMessageHTML(content){
+    var messageImage = content.image ? content.image : " ";
     var html = `<div class="message">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -13,6 +14,9 @@ $(function(){
                     <p class="lower-message__content">
                       ${content.content}
                     </p>
+                    <div>
+                      <img src=${messageImage}>
+                    </div>
                   </div>
                 </div>`
     return html;
@@ -30,10 +34,11 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(messages){
+      var html = buildHTML(messages);
       $('.messages').append(html)
-      $('.textbox').val('')
+      $('.form__message').val('')
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('error');
